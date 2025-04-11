@@ -25,7 +25,7 @@ const cardInformation = [
 
 const Card = ({ icon, title, description }) => {
   return (
-    <div className="flex w-48 flex-col items-center justify-center gap-2 rounded-4xl border-2 bg-white p-4">
+    <div className="border-sub flex w-48 flex-col items-center justify-center gap-2 rounded-4xl border-2 bg-white p-4">
       {icon}
       <p className="text-2xl font-bold">{title}</p>
       {description && <p className="text-sub text-sm">{description}</p>}
@@ -35,11 +35,11 @@ const Card = ({ icon, title, description }) => {
 
 const About = () => {
   return (
-    <section className="section">
+    <section id="about" className="section">
       <SectionTitle title="關於我" subtitle="我的介紹" />
       <div className="mt-12 flex size-full items-center justify-center">
         <div className="flex flex-row justify-center gap-24">
-          <div className="flex items-center justify-center rounded-4xl border-2">
+          <div className="border-sub flex items-center justify-center rounded-4xl border-2">
             <img src="img/about.png" alt="about" />
           </div>
 

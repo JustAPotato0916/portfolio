@@ -1,6 +1,7 @@
 import Button from './Button';
 import { BiSolidNavigation } from 'react-icons/bi';
 import { BsMouse } from 'react-icons/bs';
+import { FaRegThumbsUp } from 'react-icons/fa';
 import { FiGithub } from 'react-icons/fi';
 import { TiArrowDownThick } from 'react-icons/ti';
 
@@ -14,7 +15,7 @@ const iconLinks = [
 
 const Home = () => {
   return (
-    <section className="section">
+    <section id="home" className="section">
       <div className="grid size-full grid-cols-12 gap-12">
         <div className="col-start-3 grid grid-cols-1 items-center justify-center gap-1">
           <div className="flex flex-col items-center gap-8">
@@ -27,7 +28,10 @@ const Home = () => {
         </div>
         <div className="col-span-4 col-start-4 grid items-center p-12 pt-36">
           <div className="flex flex-col gap-6">
-            <h1 className="text-6xl font-bold">👋 陳泓亦 Eric</h1>
+            <p className="flex flex-row items-center gap-6">
+              <h1 className="text-6xl font-bold">陳泓亦 Eric</h1>
+              <FaRegThumbsUp className="mb-3 h-18 w-18" />
+            </p>
             <div className="flex flex-row items-center gap-4">
               <div className="border-sub mt-1.5 h-0 w-24 border-t-3" />
               <div className="text-2xl font-bold"> Front-end Developer</div>

@@ -3,13 +3,26 @@
 @theme {
   --font-jf-openhunnian: "JF Openhunnian", sans-serif;
 
+  --color-background: #FAFAFA;
   --color-dark: #363636;
   --color-sub: #787878;
+
+  --animate-fadeIn: fadeIn 1s ease-in-out;
+
+  @keyframes fadeIn {
+    0% {transform: translateY(-30px); opacity: 0;}
+    100% {transform: translateY(0px); opacity: 1;}
+  }
 }
 
 @layer base {
   * {
     @apply select-none font-jf-openhunnian;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background;
   }
 }
 
@@ -20,6 +33,7 @@
 @utility link {
   @apply text-sub duration-150 hover:scale-125 hover:text-dark;
 }
+
 
 @layer base {
   @font-face {
