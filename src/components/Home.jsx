@@ -28,10 +28,10 @@ const Home = () => {
         </div>
         <div className="col-span-4 col-start-4 grid items-center p-12 pt-36">
           <div className="flex flex-col gap-6">
-            <p className="flex flex-row items-center gap-6">
+            <div className="flex flex-row items-center gap-6">
               <h1 className="text-6xl font-bold">陳泓亦 Eric</h1>
               <FaRegThumbsUp className="mb-3 h-18 w-18" />
-            </p>
+            </div>
             <div className="flex flex-row items-center gap-4">
               <div className="border-sub mt-1.5 h-0 w-24 border-t-3" />
               <div className="text-2xl font-bold"> Front-end Developer</div>

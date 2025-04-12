@@ -3,14 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { useWindowScroll } from 'react-use';
 
-const navItems = [
-  'Home',
-  'About',
-  'Skills',
-  'Qualification',
-  'Projects',
-  'Contact',
-];
+const navItems = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
 
 const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
