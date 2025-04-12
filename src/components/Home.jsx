@@ -15,7 +15,7 @@ const iconLinks = [
 
 const Home = () => {
   return (
-    <section id="home" className="section">
+    <section id="home" className="section overflow-y-hidden">
       <div className="grid size-full grid-cols-12 gap-12">
         <div className="col-start-3 grid grid-cols-1 items-center justify-center gap-1">
           <div className="flex flex-col items-center gap-8">

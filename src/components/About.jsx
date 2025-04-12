@@ -35,7 +35,7 @@ const Card = ({ icon, title, description }) => {
 
 const About = () => {
   return (
-    <section id="about" className="section">
+    <section id="about" className="section overflow-y-hidden">
       <SectionTitle title="關於我" subtitle="我的介紹" />
       <div className="mt-12 flex size-full items-center justify-center">
         <div className="flex flex-row justify-center gap-24">

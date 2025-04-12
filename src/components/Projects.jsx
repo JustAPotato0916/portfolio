@@ -117,7 +117,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section overflow-y-hidden">
       <SectionTitle title="專案" subtitle="專案展示" />
       <div className="flex size-full items-center justify-center">
         <div className="mt-32 flex h-full w-full flex-row items-center justify-center gap-24">

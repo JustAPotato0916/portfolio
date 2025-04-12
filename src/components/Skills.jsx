@@ -63,7 +63,7 @@ const SkillsInfo = ({ icon, title }) => {
 
 const Skills = () => {
   return (
-    <section id="skills" className="section">
+    <section id="skills" className="section overflow-y-hidden">
       <SectionTitle title="技能與工具" subtitle="核心技能與工具展示" />
       <div className="mt-12 flex size-full items-center justify-center">
         <div className="flex w-3/4 flex-row justify-center gap-24">
