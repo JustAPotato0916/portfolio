@@ -1,4 +1,5 @@
 import About from './components/About.jsx';
+import Contact from './components/Contact.jsx';
 import Home from './components/Home.jsx';
 import Navbar from './components/Navbar.jsx';
 import Projects from './components/Projects.jsx';
@@ -12,6 +13,7 @@ const App = () => {
       <About />
       <Skills />
       <Projects />
+      <Contact />
     </main>
   );
 };
