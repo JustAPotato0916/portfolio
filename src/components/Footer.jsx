@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex size-full flex-col items-center justify-center gap-12">
           <p className="text-5xl font-bold">Eric</p>
 
-          <div className="text-dark flex flex-row gap-8 text-2xl font-bold">
+          <div className="text-sub flex flex-row gap-8 text-2xl font-bold">
             <a href="/#about" className="hover:text-black">
               About
             </a>
@@ -22,29 +22,32 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="text-dark flex flex-row gap-4">
+          <div className="text-sub flex flex-row gap-6">
             <a
               href="https://github.com/JustAPotato0916"
               className="hover:text-black"
+              target="_blank"
             >
               <FaSquareGithub className="h-10 w-10" />
             </a>
             <a
               href="mailto:JustAPotato0916@gmail.com"
               className="hover:text-black"
+              target="_blank"
             >
               <MdOutlineEmail className="h-10 w-10" />
             </a>
             <a
               href="https://discord.com/users/610389423044952064"
               className="hover:text-black"
+              target="_blank"
             >
               <RiDiscordFill className="h-10 w-10" />
             </a>
           </div>
 
           <p className="text-dark mt-12 text-sm font-bold md:text-lg">
-            Copyright © 2025 JustAPotato0916.&nbsp;All rights reserved.
+            Copyright © 2025 JustAPotato0916. All rights reserved.
           </p>
         </div>
       </div>

@@ -25,9 +25,9 @@ const cardInformation = [
 
 const Card = ({ icon, title, description }) => {
   return (
-    <div className="border-sub flex w-48 flex-col items-center justify-center gap-2 rounded-4xl border-2 bg-white p-4">
+    <div className="border-sub flex basis-1/3 flex-col items-center justify-center gap-2 rounded-4xl border-2 bg-white p-4">
       {icon}
-      <p className="text-2xl font-bold">{title}</p>
+      <p className="text-center text-base font-bold 2xl:text-2xl">{title}</p>
       {description && <p className="text-sub text-sm">{description}</p>}
     </div>
   );
@@ -37,13 +37,15 @@ const About = () => {
   return (
     <section id="about" className="section overflow-y-hidden">
       <SectionTitle title="關於我" subtitle="我的介紹" />
-      <div className="mt-12 flex size-full items-center justify-center">
-        <div className="flex flex-row justify-center gap-24">
-          <div className="border-sub flex items-center justify-center rounded-4xl border-2">
-            <img src="img/about.png" alt="about" />
+      <div className="mt-16 flex size-full items-center justify-center md:mt-12">
+        <div className="flex w-full flex-row justify-center p-12 md:gap-12 xl:gap-24 xl:p-24">
+          <div className="hidden items-center justify-center md:flex md:basis-1/2">
+            <div className="border-sub w-fit rounded-4xl border-2">
+              <img src="img/about.png" alt="about" />
+            </div>
           </div>
 
-          <div className="flex w-1/3 flex-col gap-12">
+          <div className="flex flex-col gap-12 md:basis-1/2">
             <div className="flex flex-row gap-4">
               {cardInformation.map(({ icon, title, description }) => (
                 <Card

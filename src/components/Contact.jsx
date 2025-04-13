@@ -5,19 +5,19 @@ import { RiDiscordFill } from 'react-icons/ri';
 
 const cardInformation = [
   {
-    icon: <MdOutlineEmail className="h-16 w-16" />,
+    icon: <MdOutlineEmail className="size-12 md:size-16" />,
     title: 'Email',
     description: 'JustAPotato0916@gmail.com',
     href: 'mailto:JustAPotato0916@gmail.com',
   },
   {
-    icon: <MdOutlineWhatsapp className="h-16 w-16" />,
+    icon: <MdOutlineWhatsapp className="size-12 md:size-16" />,
     title: 'Whatsapp',
     description: '+886 905-883-182',
     href: 'tel:+886-905-883-182',
   },
   {
-    icon: <RiDiscordFill className="h-16 w-16" />,
+    icon: <RiDiscordFill className="size-12 md:size-16" />,
     title: 'Discord',
     description: 'potato9330',
     href: 'https://discord.com/users/610389423044952064',
@@ -26,18 +26,21 @@ const cardInformation = [
 
 const Card = ({ icon, title, description, href }) => {
   return (
-    <div className="border-sub flex flex-1 flex-col items-center justify-center gap-2 rounded-4xl border-2 bg-white p-24">
+    <div className="border-sub flex h-fit w-full flex-none flex-col items-center justify-center gap-2 rounded-4xl border-2 bg-white py-4 md:basis-1/3 md:py-12 xl:py-24">
       {icon}
-      <p className="text-3xl font-bold">{title}</p>
-      {description && (
-        <p className="text-sub text-lg text-nowrap">{description}</p>
-      )}
+      <p className="text-xl font-bold md:text-3xl">{title}</p>
+      <p className="text-sub text-lg text-nowrap">{description}</p>
+
       {href && (
-        <div className="text-sub mt-5 flex cursor-pointer flex-row items-center gap-1 hover:text-black">
-          <a href={href} className="text-lg font-bold" target="_blank">
+        <div className="text-dark mt-2 flex cursor-pointer flex-row items-center hover:text-black md:mt-5">
+          <a
+            href={href}
+            className="text-lg font-bold md:text-xl xl:text-lg"
+            target="_blank"
+          >
             聯繫我
           </a>
-          <LiaArrowAltCircleRight className="mt-0.5 h-6 w-6" />
+          <LiaArrowAltCircleRight className="mt-0.5 size-5 md:size-6" />
         </div>
       )}
     </div>
@@ -48,10 +51,11 @@ const Contact = () => {
   return (
     <section id="contact" className="section overflow-y-hidden">
       <SectionTitle title="聯繫資訊" subtitle="如何聯繫我" />
-      <div className="flex size-full flex-col items-center justify-center">
-        <div className="flex w-4/5 flex-row justify-center gap-24">
+      <div className="mt-24 flex size-full flex-col items-center justify-center md:mt-12">
+        <div className="flex size-full flex-col items-center justify-center gap-6 px-12 md:flex-row md:gap-12 md:px-24 xl:px-36 2xl:gap-24">
           {cardInformation.map(({ icon, title, description, href }) => (
             <Card
+              key={title}
               icon={icon}
               title={title}
               description={description}

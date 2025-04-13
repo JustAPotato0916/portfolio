@@ -4,6 +4,7 @@ import Footer from './components/Footer.jsx';
 import Home from './components/Home.jsx';
 import Navbar from './components/Navbar.jsx';
 import Projects from './components/Projects.jsx';
+import ScrollToTopButton from './components/ScrollToTopButton.jsx';
 import Skills from './components/Skills.jsx';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <Projects />
       <Contact />
       <Footer />
+      <ScrollToTopButton />
     </main>
   );
 };

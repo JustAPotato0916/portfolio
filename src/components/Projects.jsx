@@ -2,6 +2,7 @@ import SectionTitle from './SectionTitle.jsx';
 import gsap from 'gsap';
 import { useRef, useState } from 'react';
 import { CiCircleChevLeft, CiCircleChevRight } from 'react-icons/ci';
+import { LuLink } from 'react-icons/lu';
 
 const projectsInfo = [
   {
@@ -43,26 +44,33 @@ const Card = ({ index }) => {
 
   return (
     <div className="flex w-full flex-col items-center justify-center gap-4">
-      <div className="flex w-1/2">
+      <div className="flex w-3/4 xl:w-1/2">
         <div className="border-sub border-1">
           <img src={`img/project-${index + 1}.png`} alt="Project Screenshot" />
         </div>
       </div>
       <div className="flex w-5/6 flex-col items-center gap-2">
-        <p className="text-2xl font-bold">{name}</p>
-        <p className="text-sub text-lg">{description}</p>
-        <p className="text-lg text-blue-500">{skills}</p>
+        <p className="text-lg font-bold md:text-2xl">{name}</p>
+        <p className="text-sub text-sm md:text-lg">{description}</p>
+        <p className="text-center text-blue-500 md:text-lg">{skills}</p>
       </div>
 
-      <div className="text-green-500">
+      <div className="flex flex-row items-center text-green-500 md:text-lg">
+        {(demoURL || githubURL) && <LuLink className="mt-1 mr-2 size-4" />}
         {demoURL && (
           <>
-            <a href={demoURL}>Demo</a>
-            &nbsp;/&nbsp;
+            <a href={demoURL} target="_blank">
+              Demo
+            </a>{' '}
+            /{' '}
           </>
         )}
 
-        {githubURL && <a href={githubURL}>Github</a>}
+        {githubURL && (
+          <a href={githubURL} target="_blank">
+            Github
+          </a>
+        )}
       </div>
     </div>
   );
@@ -120,8 +128,8 @@ const Projects = () => {
     <section id="projects" className="section overflow-y-hidden">
       <SectionTitle title="專案" subtitle="專案展示" />
       <div className="flex size-full items-center justify-center">
-        <div className="mt-32 flex h-full w-full flex-row items-center justify-center gap-24">
-          <div className="flex flex-col items-center">
+        <div className="mt-48 flex h-full w-full flex-row items-center justify-center gap-2 md:mt-32 md:gap-24">
+          <div className="ml-1 flex flex-col items-center">
             <button
               className="text-sub cursor-pointer hover:text-black"
               disabled={isAnimating}
@@ -129,18 +137,18 @@ const Projects = () => {
                 handleClick('prev');
               }}
             >
-              <CiCircleChevLeft className="h-14 w-14" />
+              <CiCircleChevLeft className="size-8 md:size-14" />
             </button>
           </div>
           <div
             ref={cardRef}
-            className="border-sub h-3/5 w-1/2 rounded-4xl border-1 bg-white"
+            className="border-sub h-2/3 rounded-4xl border-1 bg-white md:h-3/5 md:w-1/2 2xl:h-2/3"
           >
             <div className="flex size-full flex-col items-center justify-center">
               <Card index={cardIndex} />
             </div>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="mr-1 flex flex-col items-center">
             <button
               className="text-sub cursor-pointer hover:text-black"
               disabled={isAnimating}
@@ -148,12 +156,12 @@ const Projects = () => {
                 handleClick('next');
               }}
             >
-              <CiCircleChevRight className="h-14 w-14" />
+              <CiCircleChevRight className="size-8 md:size-14" />
             </button>
           </div>
         </div>
 
-        <p className="text-sub absolute bottom-1/12">
+        <p className="text-sub absolute bottom-4 md:bottom-1/12 2xl:bottom-8">
           {cardIndex + 1} / {totalProjects}
         </p>
       </div>
