@@ -1,12 +1,36 @@
-# React + Vite
+<a name="readme-top"></a>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+  <h3 align="center">My Portfolio</h3>
 
-Currently, two official plugins are available:
+  <p align="center">
+    <a href="">View Demo</a>
+  </p>
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<!-- ABOUT THE PROJECT -->
 
-## Expanding the ESLint configuration
+## About The Project
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+[![Portfolio][product-screenshot]]()
+
+這個專案使用 React 作為前端框架，搭配 Tailwind CSS 進行樣式設計，並利用 GSAP 創建動態且引人入勝的動畫效果。這個組合使得個人網站變得視覺上令人驚艷，並提供流暢的用戶體驗。透過 React 的強大功能、Tailwind CSS 的統一設計風格，以及 GSAP 的動畫工具，實現了動態導覽列，打造出一個模組化、可維護且在不同設備上都能呈現最佳效果的個人網站。
+
+## Built With
+
+- [![React][react.js]][react-url]
+
+* [![TailwindCSS][TailwindCSS]][TailwindCSS-url]
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[product-screenshot]: public/img/project-1.png
+
+[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+
+[react-url]: https://reactjs.org/
+
+[TailwindCSS]: https://img.shields.io/badge/tailwindcss-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
+
+[TailwindCSS-url]: https://tailwindcss.com/
+
