@@ -30,7 +30,7 @@ const ScrollToTopButton = () => {
   }, [isShow]);
 
   return (
-    <div className="fixed right-12 bottom-16">
+    <div className="fixed right-6 bottom-8 md:right-12 md:bottom-16">
       <a
         ref={buttonRef}
         href="#"
