@@ -26,9 +26,12 @@ const cardInformation = [
 
 const Card = ({ icon, title, description, href }) => {
   return (
-    <div className="border-sub flex h-fit w-full flex-none flex-col items-center justify-center gap-2 rounded-4xl border-2 bg-white py-4 md:basis-1/3 md:py-12 xl:py-24">
-      {icon}
-      <p className="text-xl font-bold md:text-3xl">{title}</p>
+    <div className="border-sub flex w-full flex-col items-center justify-center gap-2 rounded-4xl border-2 bg-white p-4 md:basis-1/3 md:py-12 xl:py-24">
+      <div className="flex flex-row items-center justify-center gap-2 md:flex-col">
+        {icon}
+        <p className="text-xl font-bold md:text-3xl">{title}</p>
+      </div>
+
       <p className="text-sub text-lg text-nowrap">{description}</p>
 
       {href && (
@@ -51,8 +54,9 @@ const Contact = () => {
   return (
     <section id="contact" className="section">
       <SectionTitle title="聯繫資訊" subtitle="如何聯繫我" />
-      <div className="flex size-full flex-col items-center justify-center">
-        <div className="flex size-full flex-col items-center justify-center gap-6 px-12 md:flex-row md:gap-12 md:px-24 xl:px-36 2xl:gap-24">
+
+      <div className="flex size-full items-center justify-center">
+        <div className="flex size-full flex-col items-center justify-center gap-6 px-6 md:flex-row md:gap-12 md:px-24 xl:px-36 2xl:gap-24">
           {cardInformation.map(({ icon, title, description, href }) => (
             <Card
               key={title}

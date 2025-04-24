@@ -46,7 +46,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <p className="text-dark mt-12 text-sm font-bold md:text-lg">
+          <p className="text-dark mt-12 text-xs font-bold md:text-sm">
             Copyright © 2025 JustAPotato0916. All rights reserved.
           </p>
         </div>
