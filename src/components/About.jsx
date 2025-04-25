@@ -1,5 +1,7 @@
 import Button from './Button.jsx';
+import Loading from './Loading.jsx';
 import SectionTitle from './SectionTitle.jsx';
+import { useState } from 'react';
 import { FaUserClock } from 'react-icons/fa6';
 import { HiDocumentText } from 'react-icons/hi2';
 import { RiTeamFill } from 'react-icons/ri';
@@ -30,6 +32,8 @@ const Card = ({ icon, title }) => {
 };
 
 const About = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <section id="about" className="section">
       <SectionTitle title="關於我" subtitle="我的介紹" />
@@ -38,7 +42,13 @@ const About = () => {
         <div className="flex w-full flex-col justify-center gap-4 p-12 md:gap-6 xl:flex-row xl:gap-24 xl:p-24">
           <div className="flex items-center justify-center xl:basis-1/3">
             <div className="border-sub w-72 rounded-4xl border-2 xl:w-fit">
-              <img src="img/about.png" alt="about" />
+              {isLoading && <Loading />}
+              <img
+                src="img/about.png"
+                alt="about"
+                className={`hidden xl:block ${isLoading ? 'hidden' : 'block'}`}
+                onLoad={() => setIsLoading(false)}
+              />
             </div>
           </div>
 

@@ -8,10 +8,16 @@
   --color-sub: #787878;
 
   --animate-fadeIn: fadeIn 1s ease-in-out;
+  --animate-wave: wave 1.5s ease-in-out infinite;
 
   @keyframes fadeIn {
     0% {transform: translateY(-30px); opacity: 0;}
     100% {transform: translateY(0px); opacity: 1;}
+  }
+
+  @keyframes wave {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-10px); }
   }
 }
 

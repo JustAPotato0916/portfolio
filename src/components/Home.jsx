@@ -1,4 +1,6 @@
 import Button from './Button';
+import Loading from './Loading.jsx';
+import { useState } from 'react';
 import { BiSolidNavigation } from 'react-icons/bi';
 import { BsMouse } from 'react-icons/bs';
 import { FaRegThumbsUp } from 'react-icons/fa';
@@ -14,6 +16,8 @@ const iconLinks = [
 ];
 
 const Home = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <section
       id="home"
@@ -22,7 +26,13 @@ const Home = () => {
       <div className="col-start-2 hidden grid-cols-1 items-center justify-center gap-1 xl:grid 2xl:col-start-3">
         <div className="flex-col items-center gap-8 xl:flex">
           {iconLinks.map(({ brand, href, icon }) => (
-            <a key={brand} href={href} className="link">
+            <a
+              key={brand}
+              href={href}
+              className="link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {icon}
             </a>
           ))}
@@ -60,7 +70,13 @@ const Home = () => {
         </div>
       </div>
       <div className="col-span-3 grid items-center justify-center">
-        <img src="img/about.png" alt="about" className="hidden xl:block" />
+        {isLoading && <Loading />}
+        <img
+          src="img/about.png"
+          alt="about"
+          className={`hidden xl:block ${isLoading ? 'hidden' : 'block'}`}
+          onLoad={() => setIsLoading(false)}
+        />
       </div>
     </section>
   );

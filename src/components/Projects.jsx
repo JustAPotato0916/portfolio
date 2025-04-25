@@ -57,7 +57,7 @@ const Card = ({ index }) => {
       <div className="flex flex-row items-center text-green-500 md:text-lg">
         {demoURL && (
           <>
-            <a href={demoURL} target="_blank">
+            <a href={demoURL} target="_blank" rel="noopener noreferrer">
               Demo
             </a>
             &nbsp; {'/'} &nbsp;
@@ -65,7 +65,7 @@ const Card = ({ index }) => {
         )}
 
         {githubURL && (
-          <a href={githubURL} target="_blank">
+          <a href={githubURL} target="_blank" rel="noopener noreferrer">
             Github
           </a>
         )}
