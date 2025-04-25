@@ -74,7 +74,7 @@ const tools = [
 const SkillsInfo = ({ icon, title }) => {
   return (
     <div className="flex basis-1/3 flex-row items-center gap-x-4 p-2 xl:basis-1">
-      <div className="flex w-full flex-row items-center gap-2 md:justify-center">
+      <div className="flex w-full flex-row items-center gap-2 xl:justify-center">
         {icon ? icon : <RiVerifiedBadgeLine className="skillIcon" />}
         <p className="text-sm font-bold md:text-2xl">{title}</p>
       </div>

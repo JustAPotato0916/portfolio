@@ -34,16 +34,16 @@ const About = () => {
     <section id="about" className="section">
       <SectionTitle title="關於我" subtitle="我的介紹" />
 
-      <div className="flex items-center justify-center md:size-full">
-        <div className="flex w-full flex-row justify-center p-12 md:gap-12 xl:gap-24 xl:p-24">
-          <div className="hidden items-center justify-center md:flex md:basis-1/3">
-            <div className="border-sub w-fit rounded-4xl border-2">
+      <div className="flex items-center justify-center xl:size-full">
+        <div className="flex w-full flex-col justify-center gap-4 p-12 md:gap-6 xl:flex-row xl:gap-24 xl:p-24">
+          <div className="flex items-center justify-center xl:basis-1/3">
+            <div className="border-sub w-72 rounded-4xl border-2 xl:w-fit">
               <img src="img/about.png" alt="about" />
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 md:basis-1/2 md:gap-12">
-            <div className="flex flex-row gap-2 md:gap-4">
+          <div className="flex flex-col gap-6 xl:basis-1/2 xl:gap-12">
+            <div className="flex flex-row gap-2 xl:gap-4">
               {cardInformation.map(({ icon, title }) => (
                 <Card key={title} icon={icon} title={title} />
               ))}

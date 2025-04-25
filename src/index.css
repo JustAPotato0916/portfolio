@@ -27,7 +27,7 @@
 }
 
 @utility section {
-  @apply flex flex-col relative h-lvh w-screen overflow-hidden;
+  @apply flex flex-col relative size-full my-12 xl:my-0 xl:h-lvh xl:w-screen overflow-hidden;
 }
 
 @utility link {

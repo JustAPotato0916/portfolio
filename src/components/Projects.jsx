@@ -131,8 +131,8 @@ const Projects = () => {
       <SectionTitle title="專案" subtitle="專案展示" />
 
       <div className="flex items-center justify-center md:size-full">
-        <div className="flex flex-col items-center justify-center gap-12 p-2 md:size-full md:p-12">
-          <div className="flex size-full flex-row items-center justify-center gap-2 md:gap-24">
+        <div className="flex flex-col items-center justify-center gap-12 p-4 xl:size-full xl:p-12">
+          <div className="flex size-full flex-row items-center justify-center gap-4 xl:gap-24">
             <div className="flex flex-col items-center">
               <button
                 className="text-sub cursor-pointer hover:text-black"

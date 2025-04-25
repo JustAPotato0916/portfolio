@@ -55,8 +55,8 @@ const Contact = () => {
     <section id="contact" className="section">
       <SectionTitle title="聯繫資訊" subtitle="如何聯繫我" />
 
-      <div className="flex size-full items-center justify-center">
-        <div className="flex size-full flex-col items-center justify-center gap-6 px-6 md:flex-row md:gap-12 md:px-24 xl:px-36 2xl:gap-24">
+      <div className="my-12 flex size-full items-center justify-center xl:my-0">
+        <div className="flex size-full flex-col items-center justify-center gap-6 px-6 md:px-24 xl:flex-row xl:gap-12 xl:px-36 2xl:gap-24">
           {cardInformation.map(({ icon, title, description, href }) => (
             <Card
               key={title}

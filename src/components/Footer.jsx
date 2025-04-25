@@ -5,7 +5,7 @@ import { RiDiscordFill } from 'react-icons/ri';
 
 const Footer = () => {
   return (
-    <footer className="border-sub relative h-[50lvh] w-screen overflow-x-hidden border-t-1 bg-white">
+    <footer className="border-sub relative h-full w-screen overflow-x-hidden border-t-1 bg-white p-4 xl:h-[50lvh] xl:p-0">
       <div className="flex size-full items-center justify-center">
         <div className="flex size-full flex-col items-center justify-center gap-12">
           <p className="text-5xl font-bold">Eric</p>

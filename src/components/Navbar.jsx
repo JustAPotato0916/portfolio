@@ -94,7 +94,7 @@ const Navbar = () => {
         >
           <div className="text-4xl">Eric</div>
 
-          <div className="hidden gap-10 md:flex md:flex-row">
+          <div className="hidden gap-10 xl:flex xl:flex-row">
             {navItems.map(({ title }) => (
               <a
                 key={title}
@@ -116,7 +116,7 @@ const Navbar = () => {
             </a>
           </div>
 
-          <div className="block md:hidden" onClick={handleBottomNavOpen}>
+          <div className="block xl:hidden" onClick={handleBottomNavOpen}>
             <HiOutlineMenuAlt3 className="size-7" />
           </div>
         </nav>
@@ -129,7 +129,7 @@ const Navbar = () => {
         ></div>
         <div
           ref={bottomNavRef}
-          className="absolute bottom-0 flex h-2/5 w-full flex-row flex-wrap bg-white p-6 md:p-12"
+          className="absolute bottom-0 flex h-2/5 w-full flex-row flex-wrap bg-white p-6 xl:p-12"
         >
           {navItems.map(({ icon, title }) => (
             <a

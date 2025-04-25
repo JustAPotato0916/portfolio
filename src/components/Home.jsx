@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="section size-full items-center justify-center overflow-y-hidden xl:grid xl:grid-cols-12 xl:gap-12"
+      className="section my-12 size-full items-center justify-center overflow-y-hidden xl:my-0 xl:grid xl:h-lvh xl:grid-cols-12 xl:gap-12"
     >
       <div className="col-start-2 hidden grid-cols-1 items-center justify-center gap-1 xl:grid 2xl:col-start-3">
         <div className="flex-col items-center gap-8 xl:flex">
