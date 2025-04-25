@@ -41,12 +41,12 @@ const About = () => {
       <div className="flex items-center justify-center xl:size-full">
         <div className="flex w-full flex-col justify-center gap-4 p-12 md:gap-6 xl:flex-row xl:gap-24 xl:p-24">
           <div className="flex items-center justify-center xl:basis-1/3">
-            <div className="border-sub w-72 rounded-4xl border-2 xl:w-fit">
-              {isLoading && <Loading />}
+            {isLoading && <Loading />}
+            <div className="border-sub hidden w-72 rounded-4xl border-2 md:block xl:w-fit">
               <img
                 src="img/about.png"
                 alt="about"
-                className={`hidden xl:block ${isLoading ? 'hidden' : 'block'}`}
+                className={`${isLoading ? 'hidden' : 'block'}`}
                 onLoad={() => setIsLoading(false)}
               />
             </div>
