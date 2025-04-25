@@ -35,20 +35,18 @@ const Loading = () => {
 
 const App = () => {
   return (
-    <main className="relative min-h-screen max-w-screen overflow-x-hidden">
-      <Navbar />
-      <ScrollToTopButton />
-
-      <Suspense fallback={<Loading />}>
+    <Suspense fallback={<Loading />}>
+      <main className="animate-fadeIn relative min-h-screen max-w-screen overflow-x-hidden">
+        <Navbar />
         <Home />
         <About />
         <Skills />
         <Projects />
         <Contact />
-      </Suspense>
-
-      <Footer />
-    </main>
+        <ScrollToTopButton />
+        <Footer />
+      </main>
+    </Suspense>
   );
 };
 
